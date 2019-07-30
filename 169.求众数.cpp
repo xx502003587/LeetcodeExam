@@ -7,6 +7,7 @@
 
 using namespace std;
 
+// 投票法
 int majorityElement(vector<int>& nums) {
     if (nums.size() == 1) {
         return nums[0];
