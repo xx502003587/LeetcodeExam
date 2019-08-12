@@ -44,7 +44,7 @@ void changeBoard(vector<vector<int>>& board, int row, int col) {
         if (live > 3)
             board[row][col] = 2;
     }
-        // 当前为死细胞
+    // 当前为死细胞
     else {
         // 如果死细胞周围正好有三个活细胞，则该位置死细胞复活
         if (live == 3)
