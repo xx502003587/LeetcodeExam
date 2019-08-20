@@ -14,14 +14,16 @@ void adjust(vector<int> &arr, int len, int index) {
     int right = 2 * index + 2;// index的右子节点
 
     int maxIdx = index;
-    if (left < len && arr[left] > arr[maxIdx]) maxIdx = left;
-    if (right < len && arr[right] > arr[maxIdx]) maxIdx = right;
+    // 以下两个if条件中第二个表达式的符号改为 < 就是小顶堆，生成递减序列
+    if (left < len && arr[left] > arr[maxIdx]) 
+        maxIdx = left;
+    if (right < len && arr[right] > arr[maxIdx]) 
+        maxIdx = right;
 
     if (maxIdx != index) {
         swap(arr[maxIdx], arr[index]);
         adjust(arr, len, maxIdx);
     }
-
 }
 
 void heapSort(vector<int> &arr, int size) {
