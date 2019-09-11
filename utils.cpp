@@ -23,12 +23,13 @@ int str2int(const string& str) {
 }
 
 // split函数，按照字符进行分割
-vector<int> split(const string& str, const char& flag = ' ') {
-    vector<int> res;
+vector<string> split(const string& str, const char& flag = ' ') {
+    vector<string> res;
     istringstream ss(str);
     string temp = "";
     while (getline(ss, temp, flag)) {
-        res.push_back(str2int(temp));
+        if (!temp.empty())
+            res.push_back(temp);
     }
     return res;
 }
