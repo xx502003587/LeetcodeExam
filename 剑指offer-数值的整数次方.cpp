@@ -47,7 +47,7 @@ double Power(double base, int exponent) {
     if (equal0(base) && exponent < 0) {
         return 0;
     }
-    // 获取exp的绝对值
+    // 获取exp的绝对值n
     auto absExponent = (unsigned int)exponent;
     if (exponent < 0) {
         absExponent = (unsigned int)(-exponent);
